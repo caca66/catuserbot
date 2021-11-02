@@ -35,7 +35,7 @@ async def _(event):
         end = datetime.now()
         ms = (end - start).microseconds / 1000
         await catevent.edit(
-            f"<b><i>☞ Pong</b></i>\n➥ {ms} <b><i>ms\n➥ Bot of {hmention}</b></i>",
+            f"<b><i>**- سرعة بوتك**</b></i>\n➥ {ms} <b><i>ms\n➥ **Owner** {hmention}</b></i>",
             parse_mode="html",
         )
 
