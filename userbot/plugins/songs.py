@@ -103,7 +103,7 @@ async def _(event):
         event.chat_id,
         song_file,
         force_document=False,
-        caption=f"<b><i>➥ Title :- {ytdata['title']}</i></b>\n<b><i>➥ **Owner** :- [𝐀 𝐋 𝐎 𝐍 𝐄 ♪](t.me/C1CIC)</i></b>",
+        caption=f"<b><i>➥ Title :- {ytdata['title']}</i></b>\n<b><i>➥ Owner :- {hmention}</i></b>",
         parse_mode="html",
         thumb=catthumb,
         supports_streaming=True,
