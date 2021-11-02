@@ -58,16 +58,16 @@ async def fetch_info(replied_user, event):
     last_name = last_name.replace("\u2060", "") if last_name else (" ")
     username = "@{}".format(username) if username else ("This User has no Username")
     user_bio = "This User has no About" if not user_bio else user_bio
-    caption = "<b><i>**اهلين عيني الاونر \nهاذي معلومات المستخدم الي طلبتها :</i></b>\n\n"
-    caption += f"<b> - اسمه عندك:</b> {first_name} {last_name}\n"
-    caption += f"<b> - يوزره :</b> {username}\n"
-    caption += f"<b> - ايديه :</b> <code>{user_id}</code>\n"
-    caption += f"<b> - مركز البيانات :</b> {dc_id}\n"
-    caption += f"<b> - عدد الصور بحسابه :</b> {replied_user_profile_photos_count}\n"
-    caption += f"<b> - تحقق منه تليقرام ؟ :</b> اي\n\n"
-    caption += f"<b>- البايو حقه:</b> \n<code>{user_bio}</code>\n\n"
-    caption += f"<b> - عدد المجموعات المشتركه :</b> {common_chat}\n"
-    caption += "<b> - رابط حسابه :</b> "
+    caption = "<b><i>اهلين عيني الاونر \nهاذي معلومات المستخدم الي طلبتها :</i></b>\n\n"
+    caption += f"<b> ♪  اسمه عندك ◂ </b> {first_name} {last_name}\n"
+    caption += f"<b> ♪  يوزره ◂ </b> {username}\n"
+    caption += f"<b> ♪  ايديه ◂ </b> <code>{user_id}</code>\n"
+    caption += f"<b> ♪  مركز البيانات ◂ </b> {dc_id}\n"
+    caption += f"<b> ♪  عدد الصور بحسابه ◂ </b> {replied_user_profile_photos_count}\n"
+    caption += f"<b> ♪ تحقق منه التيليقرام ؟ ◂ </b> اي\n\n"
+    caption += f"<b> ♪ البايو حقه ◂ </b> \n<code>{user_bio}</code>\n\n"
+    caption += f"<b> ♪  عدد المجموعات المشتركه ◂ </b> {common_chat}\n"
+    caption += "<b> ♪  رابط حسابه  ◂ </b> "
     caption += f'<a href="tg://user?id={user_id}">{first_name}</a>'
     return photo, caption
 
