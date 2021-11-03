@@ -221,7 +221,7 @@ async def inline_handler(event):  # sourcery no-metrics
     if query_user_id == Config.OWNER_ID or query_user_id in Config.SUDO_USERS:
         hmm = re.compile("troll (.*) (.*)")
         match = re.findall(hmm, query)
-        inf = re.compile("همسه (.*) (.*)")
+        inf = re.compile("secret (.*) (.*)")
         match2 = re.findall(inf, query)
         hid = re.compile("hide (.*)")
         match3 = re.findall(hid, query)
@@ -351,7 +351,7 @@ async def inline_handler(event):  # sourcery no-metrics
             query = query[7:]
             user, txct = query.split(" ", 1)
             builder = event.builder
-            همسه = os.path.join("./userbot", "secrets.txt")
+            secret = os.path.join("./userbot", "secrets.txt")
             try:
                 jsondata = json.load(open(secret))
             except Exception:
