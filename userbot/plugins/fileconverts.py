@@ -559,13 +559,13 @@ async def _(event):  # sourcery no-metrics
 
 
 @catub.cat_cmd(
-    pattern="nfc (mp3|voice)",
-    command=("nfc", plugin_category),
+    pattern="حوله (mp3|voice)",
+    command=("حوله", plugin_category),
     info={
         "header": "Converts the required media file to voice or mp3 file.",
         "usage": [
-            "{tr}nfc mp3",
-            "{tr}nfc voice",
+            "{tr}حوله mp3",
+            "{tr}حوله صوت",
         ],
     },
 )
@@ -579,7 +579,7 @@ async def _(event):
         await edit_or_reply(event, "reply to media file")
         return
     input_str = event.pattern_match.group(1)
-    event = await edit_or_reply(event, "`Converting...`")
+    event = await edit_or_reply(event, "**ابشر جاري تحويله..**")
     try:
         start = datetime.now()
         c_time = time.time()
