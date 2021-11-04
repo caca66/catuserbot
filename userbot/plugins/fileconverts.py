@@ -559,7 +559,7 @@ async def _(event):  # sourcery no-metrics
 
 
 @catub.cat_cmd(
-    pattern="حوله (mp3|voice)",
+    pattern="حوله (mp3|صوت)",
     command=("حوله", plugin_category),
     info={
         "header": "Converts the required media file to voice or mp3 file.",
