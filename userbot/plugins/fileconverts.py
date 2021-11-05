@@ -559,13 +559,13 @@ async def _(event):  # sourcery no-metrics
 
 
 @catub.cat_cmd(
-    pattern="حوله (mp3|صوت)",
-    command=("حوله", plugin_category),
+    pattern="nfc (mp3|voice)",
+    command=("nfc", plugin_category),
     info={
         "header": "Converts the required media file to voice or mp3 file.",
         "usage": [
-            "{tr}حوله mp3",
-            "{tr}حوله صوت",
+            "{tr}nfc mp3",
+            "{tr}nfc voice",
         ],
     },
 )
