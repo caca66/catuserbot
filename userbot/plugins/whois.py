@@ -58,17 +58,18 @@ async def fetch_info(replied_user, event):
     last_name = last_name.replace("\u2060", "") if last_name else (" ")
     username = "@{}".format(username) if username else ("This User has no Username")
     user_bio = "This User has no About" if not user_bio else user_bio
-    caption = "<b><i>𝐇𝐢 𝐎𝐰𝐧𝐞𝐫 𝐓𝐡𝐢𝐬 𝐢𝐬 𝐭𝐡𝐞 𝐢𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 𝐲𝐨𝐮 𝐫𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 ♫
-✦⋯⋯⋯⋯⋯⋯⋯✦</i></b>\n\n"
-    caption += f"<b> ✷ 𝒀𝒐𝒖 𝒉𝒂𝒗𝒆 𝒉𝒊𝒔 𝒏𝒂𝒎𝒆 - </b> {first_name} {last_name}\n"
-    caption += f"<b> ✷ 𝒀𝒐𝒖 𝒉𝒂𝒗𝒆 𝒉𝒊𝒔 𝑼𝒔𝒆𝒓 - </b> {username}\n"
-    caption += f"<b> ✷ 𝒀𝒐𝒖 𝒉𝒂𝒗𝒆 𝒉𝒊𝒔 𝑰𝒅 -  </b> <code>{user_id}</code>\n"
-    caption += f"<b> ✷ 𝑫𝒂𝒕𝒂 𝑪𝒆𝒏𝒕𝒓𝒆𝑰𝒅 - </b> {dc_id}\n"
-    caption += f"<b> ✷ 𝑵𝒖𝒎𝒃𝒆𝒓 𝒐𝒇 𝑷𝒓𝒐𝒇𝒊𝒍𝒆 𝑷𝒊𝒄𝒔 - </b> {replied_user_profile_photos_count}\n"
-    caption += f"<b> ✷ 𝑰𝒔 𝑽𝒆𝒓𝒊𝒇𝒊𝒆𝒅 𝒃𝒚 𝑻𝒆𝒍𝒆𝒈𝒓𝒂𝒎 - </b> Yes\n\n"
-    caption += f"<b> ✷ 𝒀𝒐𝒖 𝒉𝒂𝒗𝒆 𝒉𝒊𝒔 𝑩𝒊𝒐 - </b> \n<code>{user_bio}</code>\n\n"
-    caption += f"<b> ✷ 𝑪𝒐𝒎𝒎𝒐𝒏 𝑮𝒓𝒐𝒖𝒑𝒔 - </b> {common_chat}\n"
-    caption += "<b> ✷ 𝑯𝒊𝒔 𝑨𝒄𝒄𝒐𝒖𝒏𝒕 𝑳𝒊𝒏𝒌 - </b> "
+    caption = "<b><i>USER INFO from Durov's Database :</i></b>\n\n"
+    caption += f"<b>👤 First Name:</b> {first_name} {last_name}\n"
+    caption += f"<b>🤵 Username:</b> {username}\n"
+    caption += f"<b>🔖 ID:</b> <code>{user_id}</code>\n"
+    caption += f"<b>🌏 Data Centre ID:</b> {dc_id}\n"
+    caption += f"<b>🖼 Number of Profile Pics:</b> {replied_user_profile_photos_count}\n"
+    caption += f"<b>🤖 Is Bot:</b> {is_bot}\n"
+    caption += f"<b>🔏 Is Restricted:</b> {restricted}\n"
+    caption += f"<b>🌐 Is Verified by Telegram:</b> {verified}\n\n"
+    caption += f"<b>✍️ Bio:</b> \n<code>{user_bio}</code>\n\n"
+    caption += f"<b>👥 Common Chats with this user:</b> {common_chat}\n"
+    caption += "<b>🔗 Permanent Link To Profile:</b> "
     caption += f'<a href="tg://user?id={user_id}">{first_name}</a>'
     return photo, caption
 
@@ -87,7 +88,7 @@ async def _(event):
     replied_user, error_i_a = await get_user_from_event(event)
     if not replied_user:
         return
-    catevent = await edit_or_reply(event, "**ابشر عيني ثواني واطلع معلوماته**")
+    catevent = await edit_or_reply(event, "`Fetching userinfo wait....`")
     replied_user = await event.client(GetFullUserRequest(replied_user.id))
     user_id = replied_user.user.id
     # some people have weird HTML in their names
