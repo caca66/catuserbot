@@ -59,7 +59,7 @@ async def fetch_info(replied_user, event):
     username = "@{}".format(username) if username else ("This User has no Username")
     user_bio = "This User has no About" if not user_bio else user_bio
     caption = "<b><i>𝐇𝐢 𝐎𝐰𝐧𝐞𝐫 𝐓𝐡𝐢𝐬 𝐢𝐬 𝐭𝐡𝐞 𝐢𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 𝐲𝐨𝐮 𝐫𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 ♫
-✦⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯✦</i></b>\n\n"
+✦⋯⋯⋯⋯⋯⋯⋯✦</i></b>\n\n"
     caption += f"<b> ✷ 𝒀𝒐𝒖 𝒉𝒂𝒗𝒆 𝒉𝒊𝒔 𝒏𝒂𝒎𝒆 - </b> {first_name} {last_name}\n"
     caption += f"<b> ✷ 𝒀𝒐𝒖 𝒉𝒂𝒗𝒆 𝒉𝒊𝒔 𝑼𝒔𝒆𝒓 - </b> {username}\n"
     caption += f"<b> ✷ 𝒀𝒐𝒖 𝒉𝒂𝒗𝒆 𝒉𝒊𝒔 𝑰𝒅 -  </b> <code>{user_id}</code>\n"
