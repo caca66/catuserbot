@@ -58,16 +58,17 @@ async def fetch_info(replied_user, event):
     last_name = last_name.replace("\u2060", "") if last_name else (" ")
     username = "@{}".format(username) if username else ("This User has no Username")
     user_bio = "This User has no About" if not user_bio else user_bio
-    caption = "<b><i>اهلين عيني الاونر \nهاذي معلومات المستخدم الي طلبتها :</i></b>\n\n"
-    caption += f"<b> ♪  اسمه عندك ◂ </b> {first_name} {last_name}\n"
-    caption += f"<b> ♪  يوزره ◂ </b> {username}\n"
-    caption += f"<b> ♪  ايديه ◂ </b> <code>{user_id}</code>\n"
-    caption += f"<b> ♪  ايدي الخادم ◂ </b> {dc_id}\n"
-    caption += f"<b> ♪  عدد الصور بحسابه ◂ </b> {replied_user_profile_photos_count}\n"
-    caption += f"<b> ♪ تحقق منه التيليقرام ؟ ◂ </b> اي\n\n"
-    caption += f"<b> ♪ البايو حقه ◂ </b> \n<code>{user_bio}</code>\n\n"
-    caption += f"<b> ♪  عدد المجموعات المشتركه ◂ </b> {common_chat}\n"
-    caption += "<b> ♪  رابط حسابه  ◂ </b> "
+    caption = "<b><i>𝐇𝐢 𝐎𝐰𝐧𝐞𝐫 𝐓𝐡𝐢𝐬 𝐢𝐬 𝐭𝐡𝐞 𝐢𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 𝐲𝐨𝐮 𝐫𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 ♫
+✦⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯✦</i></b>\n\n"
+    caption += f"<b> ✷ 𝒀𝒐𝒖 𝒉𝒂𝒗𝒆 𝒉𝒊𝒔 𝒏𝒂𝒎𝒆 - </b> {first_name} {last_name}\n"
+    caption += f"<b> ✷ 𝒀𝒐𝒖 𝒉𝒂𝒗𝒆 𝒉𝒊𝒔 𝑼𝒔𝒆𝒓 - </b> {username}\n"
+    caption += f"<b> ✷ 𝒀𝒐𝒖 𝒉𝒂𝒗𝒆 𝒉𝒊𝒔 𝑰𝒅 -  </b> <code>{user_id}</code>\n"
+    caption += f"<b> ✷ 𝑫𝒂𝒕𝒂 𝑪𝒆𝒏𝒕𝒓𝒆𝑰𝒅 - </b> {dc_id}\n"
+    caption += f"<b> ✷ 𝑵𝒖𝒎𝒃𝒆𝒓 𝒐𝒇 𝑷𝒓𝒐𝒇𝒊𝒍𝒆 𝑷𝒊𝒄𝒔 - </b> {replied_user_profile_photos_count}\n"
+    caption += f"<b> ✷ 𝑰𝒔 𝑽𝒆𝒓𝒊𝒇𝒊𝒆𝒅 𝒃𝒚 𝑻𝒆𝒍𝒆𝒈𝒓𝒂𝒎 - </b> Yes\n\n"
+    caption += f"<b> ✷ 𝒀𝒐𝒖 𝒉𝒂𝒗𝒆 𝒉𝒊𝒔 𝑩𝒊𝒐 - </b> \n<code>{user_bio}</code>\n\n"
+    caption += f"<b> ✷ 𝑪𝒐𝒎𝒎𝒐𝒏 𝑮𝒓𝒐𝒖𝒑𝒔 - </b> {common_chat}\n"
+    caption += "<b> ✷ 𝑯𝒊𝒔 𝑨𝒄𝒄𝒐𝒖𝒏𝒕 𝑳𝒊𝒏𝒌 - </b> "
     caption += f'<a href="tg://user?id={user_id}">{first_name}</a>'
     return photo, caption
 
