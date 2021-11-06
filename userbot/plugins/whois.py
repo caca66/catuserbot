@@ -59,7 +59,7 @@ async def fetch_info(replied_user, event):
     username = "@{}".format(username) if username else ("This User has no Username")
     user_bio = "This User has no About" if not user_bio else user_bio
     caption = "<b><i>USER INFO from Durov's Database :</i></b>\n\n"
-    caption += f"<b>👤 First Name:</b> {first_name} {last_name}\n"
+    caption += f"<b>✷ 𝒀𝒐𝒖 𝒉𝒂𝒗𝒆 𝒉𝒊𝒔 𝒏𝒂𝒎𝒆 -</b> {first_name} {last_name}\n"
     caption += f"<b>🤵 Username:</b> {username}\n"
     caption += f"<b>🔖 ID:</b> <code>{user_id}</code>\n"
     caption += f"<b>🌏 Data Centre ID:</b> {dc_id}\n"
